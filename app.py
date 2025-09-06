@@ -6,8 +6,13 @@ from PIL import Image
 import os
 import time
 
+
+
+
 # Load the trained model with error handling and caching
-MODEL_PATH = r"C:\Users\Msi\OneDrive\Documents\NTI\AI-AU25\Final Project (Deep Learning)\Models\best_model.keras"
+MODEL_PATH = "Models/best_model.keras"
+model = tf.keras.models.load_model(MODEL_PATH)
+
 
 @st.cache_resource
 def load_model():
